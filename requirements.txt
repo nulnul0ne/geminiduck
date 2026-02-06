@@ -1,0 +1,7 @@
+python-telegram-bot[full]==20.7
+google-generativeai>=0.5.0
+python-dotenv==1.0.0
+requests==2.31.0
+fpdf2==2.7.8
+markdown>=3.5
+python-telegram-bot[job-queue]

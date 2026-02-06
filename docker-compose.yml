@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  geminiduck_bot:
+    build: .
+    container_name: geminiduck_bot
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      - ./temp_pdfs:/app/temp_pdfs  # Для временных PDF файлов
+    # Порт не нужен для polling режима, но можно оставить для мониторинга
+    ports:
+      - "8080:8080"  # Опционально, если добавите веб-интерфейс
+    healthcheck:
+      test: ["CMD", "python", "-c", "import google.generativeai; print('API доступен')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
