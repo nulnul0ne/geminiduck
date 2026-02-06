@@ -34,10 +34,10 @@ GeminiDuck — это Telegram-бот, построенный вокруг API G
 
 ▶️ Запуск
 🔹 Локально (Python)
-  python -m venv .venv
-  source .venv/bin/activate      # Windows: .venv\Scripts\activate
-  pip install -r requirements.txt
-  python gemini_bot.py
+python -m venv .venv
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python gemini_bot.py
 
 🔹 Через Docker
   docker-compose up --build
